@@ -1,5 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Heart, Handshake, Star, Scale } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Heart,
+  Handshake,
+  Star,
+  Scale,
+} from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
@@ -45,7 +53,8 @@ export default function Home() {
               Sovereign AI Ecosystems, Engineered with Care.
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Enterprise-grade AI systems built on principles of precision, transparency, and human-centered design.
+              Enterprise-grade AI systems built on principles of precision,
+              transparency, and human-centered design.
             </p>
           </div>
           <div>
@@ -85,10 +94,12 @@ export default function Home() {
                     </span>
                   </div>
                   <p className="text-muted-foreground leading-relaxed flex-grow">
-                    AI-powered elderly care system with real-time health monitoring, intelligent caregiving assistance, and proactive caregiver alerts.
+                    AI-powered elderly care system with real-time health
+                    monitoring, intelligent caregiving assistance, and proactive
+                    caregiver alerts.
                   </p>
                   <div className="flex gap-2 flex-wrap">
-                    {["RAG", "Multi-model", "Real-time"].map((tag) => (
+                    {["RAG", "Multi-model", "Real-time"].map(tag => (
                       <span
                         key={tag}
                         className="px-2 py-1 text-xs font-mono bg-accent/10 text-accent border border-accent/30 rounded"
@@ -111,10 +122,11 @@ export default function Home() {
                   </span>
                 </div>
                 <p className="text-muted-foreground leading-relaxed flex-grow">
-                  Adaptive learning platform that personalizes education for each student using AI-driven insights and real-time analytics.
+                  Adaptive learning platform that personalizes education for
+                  each student using AI-driven insights and real-time analytics.
                 </p>
                 <div className="flex gap-2 flex-wrap">
-                  {["Adaptive", "Analytics", "LLM"].map((tag) => (
+                  {["Adaptive", "Analytics", "LLM"].map(tag => (
                     <span
                       key={tag}
                       className="px-2 py-1 text-xs font-mono bg-accent/10 text-accent border border-accent/30 rounded"
@@ -136,10 +148,11 @@ export default function Home() {
                   </span>
                 </div>
                 <p className="text-muted-foreground leading-relaxed flex-grow">
-                  Experimental research exploring novel architectures for human-AI collaboration and next-generation sovereign systems.
+                  Experimental research exploring novel architectures for
+                  human-AI collaboration and next-generation sovereign systems.
                 </p>
                 <div className="flex gap-2 flex-wrap">
-                  {["Research", "Experimental", "Collaboration"].map((tag) => (
+                  {["Research", "Experimental", "Collaboration"].map(tag => (
                     <span
                       key={tag}
                       className="px-2 py-1 text-xs font-mono bg-accent/10 text-accent border border-accent/30 rounded"
@@ -167,10 +180,12 @@ export default function Home() {
           <div className="space-y-6">
             {[
               {
-                title: "Optimizing RAG Pipelines for Sovereign AI Infrastructure",
-                summary: "Techniques for maximizing retrieval accuracy and latency in production RAG systems.",
+                title: "The Frontier of Sovereign & Ethical AI",
+                summary:
+                  "Multimodal Bayesian fusion, sovereign RAG infrastructure, and the ethical kernel underpinning every NamoNexus system.",
                 timestamp: "2026-07-15",
-                topics: ["Architecture", "Performance"],
+                topics: ["Bayesian Fusion", "RAG", "Ethics"],
+                href: "/research/frontier-of-sovereign-ai",
               },
             ].map((article, idx) => (
               <div
@@ -188,7 +203,7 @@ export default function Home() {
                   </p>
                   <div className="flex items-center justify-between pt-4 border-t border-border/50">
                     <div className="flex gap-2 flex-wrap">
-                      {article.topics.map((topic) => (
+                      {article.topics.map(topic => (
                         <span
                           key={topic}
                           className="px-2 py-1 text-xs font-mono bg-accent/10 text-accent border border-accent/30 rounded"
@@ -201,12 +216,12 @@ export default function Home() {
                       <span className="text-xs text-muted-foreground font-mono">
                         {article.timestamp}
                       </span>
-                      <a
-                        href="#"
+                      <Link
+                        href={article.href}
                         className="text-xs font-mono text-accent hover:text-accent/80 transition"
                       >
                         Read Brief →
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -313,9 +328,7 @@ export default function Home() {
             </div>
             <div className="space-y-3">
               <h3 className="font-bold text-accent">Copyright</h3>
-              <p className="text-sm text-muted-foreground">
-                NamoNexus © 2026
-              </p>
+              <p className="text-sm text-muted-foreground">NamoNexus © 2026</p>
             </div>
           </div>
           <div className="border-t border-border pt-8 text-center text-xs text-muted-foreground">

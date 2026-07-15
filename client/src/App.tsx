@@ -6,12 +6,17 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import NamoCare from "./pages/NamoCare";
+import FrontierOfSovereignAI from "./pages/research/FrontierOfSovereignAI";
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/projects/namo-care"} component={NamoCare} />
+      <Route
+        path={"/research/frontier-of-sovereign-ai"}
+        component={FrontierOfSovereignAI}
+      />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

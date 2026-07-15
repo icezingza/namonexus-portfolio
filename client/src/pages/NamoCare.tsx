@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Bell, MessageCircle, TrendingUp } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { Link } from "wouter";
 import {
   LineChart,
@@ -13,6 +13,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import ArchitectureDiagram from "@/components/ArchitectureDiagram";
 
 const accuracyData = [
   { month: "Jan", accuracy: 82 },
@@ -38,9 +39,9 @@ export default function NamoCare() {
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container flex items-center justify-between h-16">
           <Link href="/">
-            <div className="flex items-center gap-2 cursor-pointer hover:text-accent transition">
+            <div className="flex items-center gap-2 cursor-pointer text-muted-foreground hover:text-accent transition">
               <ArrowLeft className="w-5 h-5" />
-              <span className="text-sm">Back to Portfolio</span>
+              <span className="text-sm">Back</span>
             </div>
           </Link>
           <img
@@ -52,75 +53,68 @@ export default function NamoCare() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-b from-card/50 to-background">
-        <div className="container space-y-6">
-          <div>
-            <span className="mono-pill bg-green-500/20 text-green-400 border-green-400/50">
-              LIVE PROJECT
+      <section className="py-24 md:py-32 border-b border-border">
+        <div className="container max-w-4xl space-y-8">
+          <div className="flex items-center gap-3">
+            <span className="px-3 py-1 text-xs font-mono bg-green-500/10 text-green-400 border border-green-500/30 rounded-full">
+              LIVE
+            </span>
+            <span className="text-xs text-muted-foreground font-mono">
+              Production Showcase — Mock Environment
             </span>
           </div>
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-6xl font-bold">NaMo Care</h1>
-            <p className="text-2xl text-muted-foreground">
-              AI-powered elderly care assistant
+            <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+              NaMo Care
+            </h1>
+            <p className="text-xl text-muted-foreground">
+              Enterprise AI system for elderly care, combining real-time health monitoring with intelligent caregiving assistance.
             </p>
           </div>
-          <p className="text-lg text-muted-foreground max-w-3xl">
-            A compassionate AI system that combines real-time health monitoring,
-            intelligent caregiving assistance, and proactive alerts to enhance
-            the quality of life for elderly individuals and their caregivers.
-          </p>
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="py-20">
-        <div className="container space-y-12">
-          <h2 className="text-4xl font-bold text-center">Core Features</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                icon: MessageCircle,
-                title: "LINE-first UX",
-                desc: "Familiar chat interface for seamless interaction.",
-              },
-              {
-                icon: TrendingUp,
-                title: "RAG Knowledge",
-                desc: "Retrieval-augmented generation for accurate health insights.",
-              },
-              {
-                icon: Bell,
-                title: "Multi-model AI",
-                desc: "Ensemble of specialized models for comprehensive care.",
-              },
-              {
-                icon: Bell,
-                title: "Caregiver Alert",
-                desc: "Real-time notifications for critical health events.",
-              },
-            ].map((feature, idx) => {
-              const Icon = feature.icon;
-              return (
-                <div key={idx} className="glass-card-hover p-6 space-y-4">
-                  <Icon className="w-8 h-8 text-accent" />
-                  <h3 className="text-lg font-bold">{feature.title}</h3>
-                  <p className="text-sm text-muted-foreground">{feature.desc}</p>
-                </div>
-              );
-            })}
+      {/* Problem Statement */}
+      <section className="py-24 md:py-32 border-b border-border">
+        <div className="container max-w-4xl space-y-12">
+          <div className="space-y-4">
+            <h2 className="text-3xl font-bold">The Problem</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Global elderly population is growing 3x faster than the general population. Simultaneously, caregiver availability is declining, creating a critical gap in quality care delivery. Current systems are fragmented: health monitoring is disconnected from caregiving assistance, alerts are reactive rather than predictive, and there is no unified intelligence layer to coordinate care decisions.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              NaMo Care addresses this by building a sovereign AI system that augments—not replaces—human caregivers. It provides real-time health insights, predictive alerts, and intelligent care recommendations, all while maintaining transparency and user agency.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Data Visualizations */}
-      <section className="py-20 bg-card/30">
-        <div className="container space-y-16">
-          <h2 className="text-4xl font-bold text-center">Performance Metrics</h2>
+      {/* System Architecture */}
+      <section className="py-24 md:py-32 border-b border-border">
+        <div className="container max-w-4xl space-y-12">
+          <div className="space-y-4">
+            <h2 className="text-3xl font-bold">System Architecture</h2>
+            <p className="text-muted-foreground">
+              Data flows through four integrated layers: input collection, knowledge retrieval, multi-model processing, and intelligent output.
+            </p>
+          </div>
+          <ArchitectureDiagram />
+        </div>
+      </section>
+
+      {/* Evidence Section */}
+      <section className="py-24 md:py-32 border-b border-border">
+        <div className="container max-w-4xl space-y-16">
+          <div className="space-y-4">
+            <h2 className="text-3xl font-bold">Evidence</h2>
+            <p className="text-muted-foreground">
+              Objective metrics demonstrating system performance and reliability.
+            </p>
+          </div>
 
           {/* Accuracy Chart */}
-          <div className="glass-card-hover p-8 space-y-6">
-            <h3 className="text-2xl font-bold">Model Accuracy Over Time</h3>
+          <div className="border border-border rounded-lg p-12 space-y-6">
+            <h3 className="text-xl font-bold">Model Accuracy Over Time</h3>
             <ResponsiveContainer width="100%" height={300}>
               <LineChart data={accuracyData}>
                 <CartesianGrid
@@ -149,11 +143,14 @@ export default function NamoCare() {
                 />
               </LineChart>
             </ResponsiveContainer>
+            <p className="text-sm text-muted-foreground">
+              System accuracy improved from 82% to 95% over 6 months through iterative model refinement and ensemble optimization.
+            </p>
           </div>
 
           {/* Latency Chart */}
-          <div className="glass-card-hover p-8 space-y-6">
-            <h3 className="text-2xl font-bold">Model Latency Comparison</h3>
+          <div className="border border-border rounded-lg p-12 space-y-6">
+            <h3 className="text-xl font-bold">Model Latency Comparison</h3>
             <ResponsiveContainer width="100%" height={300}>
               <BarChart data={latencyData}>
                 <CartesianGrid
@@ -179,174 +176,117 @@ export default function NamoCare() {
                 />
               </BarChart>
             </ResponsiveContainer>
+            <p className="text-sm text-muted-foreground">
+              Custom-optimized model achieves 78ms latency, enabling real-time decision-making for time-critical health events.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Mockups Section */}
-      <section className="py-20">
-        <div className="container space-y-12">
-          <h2 className="text-4xl font-bold text-center">User Experience</h2>
+      {/* Tech Stack */}
+      <section className="py-24 md:py-32 border-b border-border">
+        <div className="container max-w-4xl space-y-12">
+          <div className="space-y-4">
+            <h2 className="text-3xl font-bold">Technology Stack</h2>
+            <p className="text-muted-foreground">
+              Enterprise-grade infrastructure built for reliability, scalability, and transparency.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Chat Bubble */}
-            <div className="glass-card-hover p-6 space-y-4">
-              <div className="flex items-center gap-2 mb-4">
-                <MessageCircle className="w-5 h-5 text-accent" />
-                <h3 className="text-lg font-bold">Chat Interface</h3>
+            {[
+              {
+                category: "AI/ML",
+                techs: ["LLMs", "RAG", "Vector DB", "Transformers", "Ensemble"],
+              },
+              {
+                category: "Backend",
+                techs: ["Python", "FastAPI", "PostgreSQL", "Redis", "Kubernetes"],
+              },
+              {
+                category: "Frontend",
+                techs: ["React", "TypeScript", "Tailwind", "Recharts", "Vite"],
+              },
+            ].map((stack, idx) => (
+              <div
+                key={idx}
+                className="border border-border rounded-lg p-8 space-y-6"
+              >
+                <h3 className="text-lg font-bold text-accent">{stack.category}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {stack.techs.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-2 py-1 text-xs font-mono bg-accent/10 text-accent border border-accent/30 rounded"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="space-y-3 bg-card/50 p-4 rounded-lg">
-                <div className="flex justify-end">
-                  <div className="bg-accent/20 text-accent px-4 py-2 rounded-lg max-w-xs text-sm">
-                    How's my blood pressure today?
-                  </div>
-                </div>
-                <div className="flex justify-start">
-                  <div className="bg-muted/30 text-muted-foreground px-4 py-2 rounded-lg max-w-xs text-sm">
-                    Your BP is 128/82 mmHg. Stable and healthy. Keep up the
-                    good work!
-                  </div>
-                </div>
-                <div className="flex justify-end">
-                  <div className="bg-accent/20 text-accent px-4 py-2 rounded-lg max-w-xs text-sm">
-                    Any medication reminders?
-                  </div>
-                </div>
-                <div className="flex justify-start">
-                  <div className="bg-muted/30 text-muted-foreground px-4 py-2 rounded-lg max-w-xs text-sm">
-                    Yes, take Metformin at 8 PM tonight.
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* Reminder Card */}
-            <div className="glass-card-hover p-6 space-y-4">
-              <div className="flex items-center gap-2 mb-4">
-                <Bell className="w-5 h-5 text-accent" />
-                <h3 className="text-lg font-bold">Reminders</h3>
-              </div>
-              <div className="space-y-3">
-                <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4">
-                  <p className="text-sm font-semibold text-yellow-400">
-                    Medication Due
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    Lisinopril 10mg - 2:00 PM
-                  </p>
-                </div>
-                <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4">
-                  <p className="text-sm font-semibold text-blue-400">
-                    Health Check
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    Weekly vitals measurement
-                  </p>
-                </div>
-                <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-4">
-                  <p className="text-sm font-semibold text-green-400">
-                    Activity Goal
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    3,000 steps completed today
-                  </p>
-                </div>
-              </div>
-            </div>
+      {/* Key Metrics */}
+      <section className="py-24 md:py-32 border-b border-border">
+        <div className="container max-w-4xl space-y-12">
+          <div className="space-y-4">
+            <h2 className="text-3xl font-bold">Key Metrics</h2>
+          </div>
 
-            {/* Vitals Trend */}
-            <div className="glass-card-hover p-6 space-y-4">
-              <div className="flex items-center gap-2 mb-4">
-                <TrendingUp className="w-5 h-5 text-accent" />
-                <h3 className="text-lg font-bold">Vitals Trend</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { label: "Model Accuracy", value: "95%", desc: "End-to-end system accuracy" },
+              { label: "Response Latency", value: "78ms", desc: "P95 response time" },
+              { label: "Uptime SLA", value: "99.9%", desc: "Production availability" },
+            ].map((metric, idx) => (
+              <div
+                key={idx}
+                className="border border-border rounded-lg p-8 space-y-3 text-center"
+              >
+                <p className="text-3xl font-bold text-accent">{metric.value}</p>
+                <p className="text-sm font-bold text-foreground">{metric.label}</p>
+                <p className="text-xs text-muted-foreground">{metric.desc}</p>
               </div>
-              <div className="space-y-4">
-                <div>
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm text-muted-foreground">
-                      Heart Rate
-                    </span>
-                    <span className="text-lg font-bold text-accent">72 bpm</span>
-                  </div>
-                  <div className="w-full bg-muted/30 rounded-full h-2">
-                    <div
-                      className="bg-accent h-2 rounded-full"
-                      style={{ width: "72%" }}
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm text-muted-foreground">
-                      Blood Oxygen
-                    </span>
-                    <span className="text-lg font-bold text-accent">98%</span>
-                  </div>
-                  <div className="w-full bg-muted/30 rounded-full h-2">
-                    <div
-                      className="bg-accent h-2 rounded-full"
-                      style={{ width: "98%" }}
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm text-muted-foreground">
-                      Sleep Quality
-                    </span>
-                    <span className="text-lg font-bold text-accent">85%</span>
-                  </div>
-                  <div className="w-full bg-muted/30 rounded-full h-2">
-                    <div
-                      className="bg-accent h-2 rounded-full"
-                      style={{ width: "85%" }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Disclaimer */}
       <section className="py-12 bg-card/30 border-t border-border">
-        <div className="container">
-          <div className="text-center text-xs text-muted-foreground space-y-2">
-            <p>
-              <strong>Demo showcase — mock data · read-only</strong>
-            </p>
-            <p>
-              This case study demonstrates UI/UX and data visualization
-              capabilities. All data is simulated for demonstration purposes.
-            </p>
-          </div>
+        <div className="container text-center">
+          <p className="text-xs text-muted-foreground">
+            <strong>Production Showcase — Mock Environment</strong>
+          </p>
+          <p className="text-xs text-muted-foreground mt-2">
+            This case study demonstrates system architecture and capabilities. All data is simulated for demonstration purposes.
+          </p>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container text-center space-y-8">
-          <h2 className="text-4xl font-bold">Ready to Explore?</h2>
+      {/* CTA */}
+      <section className="py-24 md:py-32">
+        <div className="container max-w-4xl text-center space-y-8">
+          <h2 className="text-3xl font-bold">Ready to Explore?</h2>
           <div className="flex gap-4 justify-center">
             <Link href="/">
               <Button
                 className="bg-accent text-accent-foreground hover:bg-accent/90"
                 size="lg"
               >
-                Back to Portfolio
+                Back to Hub
               </Button>
             </Link>
-            <Button variant="outline" size="lg">
-              Contact for Demo
-            </Button>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-border text-center text-sm text-muted-foreground">
-        <p>NamoNexus v5.0.0 © 2026 · Crafted with care</p>
+      <footer className="py-12 border-t border-border text-center text-xs text-muted-foreground">
+        <p>NamoNexus © 2026 · Sovereign AI Ecosystems</p>
       </footer>
     </div>
   );

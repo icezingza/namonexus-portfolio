@@ -1,88 +1,164 @@
-# NamoNexus v5.0.0 Design Direction
+# NamoNexus Enterprise-Grade Sovereign AI Hub — Design Direction
 
-## Chosen Approach: **Neon Minimalism**
+## Design Philosophy: Command Center Authority
 
-A cutting-edge AI architect portfolio that blends **minimalist structure** with **neon-punk energy**. The design marries the precision of technical architecture with the vibrant, forward-thinking aesthetic of cyberpunk—creating a portfolio that feels both deeply professional and visually arresting.
+A professional, minimalist command center for sovereign AI systems. This is not a portfolio—it's a strategic hub that communicates precision, authority, and technical excellence. Every element serves a purpose; nothing is decorative.
 
 ---
 
-## Design Philosophy
+## Core Design Principles
 
-### Design Movement
-**Neo-Brutalism meets Cyberpunk**: Stark geometric forms, raw typography, and bold neon accents against a dark void. Inspired by 80s retro-futurism and modern tech minimalism.
+### 1. Minimalist Authority
+- **Massive whitespace** as a design element, not emptiness
+- Ultra-clean bento grids with intentional breathing room
+- Every pixel must justify its existence
+- No decorative flourishes; only functional elegance
 
-### Core Principles
-1. **Contrast as Communication**: Navy void + Neon Cyan creates maximum visual hierarchy. Every element either recedes into darkness or glows with purpose.
-2. **Geometric Precision**: Clean lines, sharp angles, bento grids. No rounded corners—only precise rectangles and strategic curves in glass morphism.
-3. **Negative Space as Structure**: Whitespace is not empty; it's breathing room that lets neon elements dominate.
-4. **Motion as Feedback**: Subtle glows, video stingers, and micro-interactions telegraph interactivity without distraction.
+### 2. Visual Hierarchy
+- Navy (#0A0F2C) as the commanding void—stability and depth
+- Neon Cyan (#00E0FF) as the precision accent—draws attention to critical elements
+- Minimal use of color; let whitespace speak
 
-### Color Philosophy
-- **Navy (#0A0F2C)**: The void—a deep, almost-black background that makes neon pop. Psychological anchor: stability, depth, the unknown.
-- **Neon Cyan (#00E0FF)**: The pulse—used for borders, glows, highlights, and CTAs. Psychological trigger: energy, innovation, the future.
-- **Accent Neutrals**: White text on navy for readability; subtle grays for secondary text and dividers.
-- **Glow Effects**: Cyan box-shadows and text-shadows create a "lit from within" aesthetic.
+### 3. Typography as Structure
+- **Space Grotesk** (headings): Bold, geometric, commanding
+- **DM Sans** (body): Clean, readable, professional
+- No decorative fonts; only functional typography
+- Generous line-height for readability and authority
 
-### Layout Paradigm
-**Bento Grid with Asymmetric Breathing**: Avoid centered, uniform grids. Instead:
-- Hero: Split layout (left text, right glass card with video).
-- About: Staggered card layout—not all same size.
-- Projects: 2-column grid with varying heights.
-- Tech: 3-column grid with mono pills.
-- Footer: Minimal, left-aligned contact + links.
+### 4. Layout Paradigm
+- **Bento Grid with Asymmetry**: Avoid uniform grids. Vary card sizes and positions for visual interest while maintaining order
+- **Whitespace as Breathing Room**: Large gaps between sections (gap-12, gap-16) to emphasize intentionality
+- **Command-Center Aesthetic**: Horizontal flow, left-to-right scanning, clear information hierarchy
 
-### Signature Elements
-1. **Glass Morphism Cards**: Frosted glass effect with cyan borders and subtle glow. Used for hero video, project cards, and tech pills.
-2. **Neon Glow Ring**: Cyan box-shadow around video container—a "pulse" that suggests life/energy.
-3. **Mono Pill Badges**: Tech stack displayed as small, inline badges with cyan borders. Monospace font for technical feel.
+---
 
-### Interaction Philosophy
-- **Hover States**: Glows intensify, borders brighten, text shifts slightly. No jarring transitions—everything feels magnetic.
-- **Video Stinger**: Small looping video in footer or as a subtle element that reinforces brand motion.
-- **Smooth Scrolling**: Subtle fade-in animations as sections enter viewport. Respects `prefers-reduced-motion`.
+## Color Palette
 
-### Animation
-- **Entrance**: Sections fade in + subtle scale (0.95 → 1) over 600ms with ease-out.
-- **Hover**: Glow intensifies, border color brightens, slight lift (transform: translateY(-2px)) over 200ms.
-- **Video**: Autoplay, muted, looping. No controls—it's a visual element, not a player.
-- **Stagger**: Project cards stagger in by 80ms each for cascading reveal.
-- **Respect Motion**: All animations gated behind `@media (prefers-reduced-motion: no-preference)`.
+| Color | Hex | Usage |
+|-------|-----|-------|
+| Navy | #0A0F2C | Background, commanding void |
+| Cyan | #00E0FF | Accents, highlights, CTAs, borders |
+| Light Gray | #E8E8E8 | Primary text |
+| Muted Gray | #8A8AA0 | Secondary text, subtle elements |
+| Dark Card | #1A1F3A | Card backgrounds, layering |
+| Border | #2A2F4A | Subtle dividers |
 
-### Typography System
-- **Headings**: Space Grotesk (bold, geometric, futuristic). Weights: 700 (h1), 600 (h2), 500 (h3).
-- **Body**: DM Sans (clean, readable, modern). Weight: 400 (body), 500 (emphasis).
-- **UI/Tech**: JetBrains Mono (technical, precise). Weight: 500 (pills, badges).
-- **Hierarchy**: Large h1 (3xl), medium h2 (2xl), small h3 (lg). Line-height: 1.2 for headings, 1.6 for body.
+---
 
-### Brand Essence
-**"AI architecture that respects humanity."** Kanin Raksaraj builds systems that are powerful yet compassionate, technical yet human-centered. The portfolio reflects this duality: cutting-edge tech (neon, glass, precision) paired with warmth (philosophy cards, mission-driven copy).
+## Page Structure
 
-**Personality**: Visionary, Precise, Compassionate.
+### Home Page
 
-### Brand Voice
-- **Headlines**: Bold, declarative, future-facing. "Elevate your existence with NamoNexus." Not "Welcome to my portfolio."
-- **CTAs**: Action-oriented, clear. "Explore Projects" not "Click Here."
-- **Microcopy**: Warm but technical. "Human-centered AI, engineered with care." Balances innovation with empathy.
-- **Example Lines**:
-  - "Where architecture meets compassion."
-  - "Systems that scale. Humans that thrive."
+**Hero Section**
+- Minimal text, maximum impact
+- Single tagline: "Sovereign AI Ecosystems, Engineered with Care."
+- Subheading: Concise value proposition (1-2 lines)
+- No decorative video or graphics; focus on messaging
+- CTA: "Explore Initiatives" (subtle, not flashy)
 
-### Wordmark & Logo
-A bold, geometric symbol (no text). Concept: A stylized **mandala-inspired circuit**—concentric circles with neon cyan lines, suggesting both spiritual philosophy (Brahma-vihara) and technical precision. Transparent PNG, used in header and favicon.
+**Core Initiatives Section**
+- Replace "Projects" with "Core Initiatives"
+- 3 high-impact cards:
+  1. **NaMo Care** — LIVE (green badge)
+  2. **Smart Classroom** — Internal Audit (yellow badge)
+  3. **R&D Lab** — Stealth Mode (purple badge)
+- Each card: Title, description, status badge, tech tags
+- No "Coming Soon" language; use professional intensity
 
-### Signature Brand Color
-**Neon Cyan (#00E0FF)**: Unmistakably NamoNexus. Used for all highlights, glows, borders, and CTAs. It's the visual signature that ties every element together.
+**System Design Principles**
+- Replace "Brahma-vihara" section with "System Design Principles"
+- 4 principle cards with Lucide icons:
+  1. **Metta** (Heart icon) — Loving-kindness in architecture
+  2. **Karuna** (Hands icon) — Compassion for users
+  3. **Mudita** (Star icon) — Celebrating human achievement
+  4. **Upekkha** (Balance icon) — Equanimity in systems
+- Minimal text; icons do the heavy lifting
+- Generous spacing (gap-8, p-12)
+
+**Footer**
+- Minimalist signature
+- Email: contact@namonexus.com
+- LinkedIn link
+- Copyright: "NamoNexus © 2026"
+- No decorative elements
+
+### NaMo Care Case Study Page
+
+**Header**
+- Back navigation
+- Title: "NaMo Care"
+- Architecture Badge: "Production Showcase — Mock Environment"
+
+**Problem Statement**
+- Concise, blunt description of the problem
+- 2-3 sentences maximum
+- Data-driven tone
+
+**System Architecture**
+- Custom React component with styled blocks and connectors
+- Minimal, clean design
+- Navy/Cyan color scheme
+- Show data flow: User Input → Processing → Output
+- No unnecessary details; focus on the core flow
+
+**Evidence Section**
+- Recharts visualizations (Accuracy %, Latency ms)
+- Data-driven, objective presentation
+- Navy/Cyan color scheme
+
+**Tech Stack**
+- High-fidelity mono pills
+- Organized by category (AI/ML, Backend, Frontend)
+- Clean, minimal presentation
+
+**Disclaimer**
+- "Production Showcase — Mock Environment"
+- Small, subtle text
+
+---
+
+## Spacing & Layout Rules
+
+- **Section gaps**: gap-12 to gap-16 (massive whitespace)
+- **Card padding**: p-12 for large cards, p-8 for smaller cards
+- **Typography spacing**: Generous line-height (1.6 for body, 1.2 for headings)
+- **Bento grid**: Asymmetric, with varying card sizes
+- **Mobile**: Maintain spacing hierarchy; stack vertically with same gaps
+
+---
+
+## Typography System
+
+| Element | Font | Size | Weight | Line-Height |
+|---------|------|------|--------|-------------|
+| H1 | Space Grotesk | 4xl-5xl | 700 | 1.2 |
+| H2 | Space Grotesk | 3xl-4xl | 700 | 1.2 |
+| H3 | Space Grotesk | 2xl | 600 | 1.2 |
+| Body | DM Sans | base-lg | 400 | 1.6 |
+| Emphasis | DM Sans | base-lg | 500 | 1.6 |
+| Tech Pill | JetBrains Mono | xs-sm | 500 | 1.4 |
+
+---
+
+## Brand Essence
+
+**Positioning**: "Sovereign AI systems engineered with precision and care."
+
+**Personality**: Authoritative, Precise, Compassionate.
+
+**Voice**: Direct, technical, no fluff. Every word serves a purpose.
 
 ---
 
 ## Implementation Checklist
-- [ ] Global CSS: Navy background, Neon Cyan accents, font imports (Space Grotesk, DM Sans, JetBrains Mono).
-- [ ] Header: Sticky, blurred navy bg, logo, nav, social links.
-- [ ] Hero: Split layout, glass card with video, cyan glow ring, CTA button.
-- [ ] About: Bio cards, mission statement, Brahma-vihara philosophy (4 cards).
-- [ ] Projects: 2-col grid, project cards with glass effect, status badges.
-- [ ] Tech Stack: 3-col grid, mono pills with cyan borders.
-- [ ] Footer: Email, LinkedIn, small video stinger.
-- [ ] Animations: Fade-in, hover glows, staggered reveals.
-- [ ] Responsive: Mobile-first, tested on tablet and desktop.
-- [ ] Accessibility: Focus rings, reduced-motion support, semantic HTML.
+
+- [ ] Update Home page hero with minimal, high-impact messaging
+- [ ] Restructure Core Initiatives with professional intensity labels
+- [ ] Replace Brahma-vihara with System Design Principles (icons + minimal text)
+- [ ] Update footer to minimalist signature
+- [ ] Build custom architecture diagram component
+- [ ] Rebuild NaMo Care case study with problem statement, architecture, evidence
+- [ ] Ensure consistent spacing (gap-12, p-12) throughout
+- [ ] Polish typography and remove any decorative elements
+- [ ] Test responsive design on mobile and tablet
+- [ ] Final review and checkpoint

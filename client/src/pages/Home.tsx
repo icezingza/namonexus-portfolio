@@ -154,6 +154,68 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Research & Engineering Section */}
+      <section id="research" className="py-32 border-t border-border">
+        <div className="container space-y-16">
+          <div className="space-y-4">
+            <h2 className="text-4xl font-bold">Research & Engineering</h2>
+            <p className="text-muted-foreground text-lg">
+              Technical deep-dives and architectural insights.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                title: "Optimizing RAG Pipelines for Sovereign AI Infrastructure",
+                summary: "Techniques for maximizing retrieval accuracy and latency in production RAG systems.",
+                timestamp: "2026-07-15",
+                topics: ["Architecture", "Performance"],
+              },
+            ].map((article, idx) => (
+              <div
+                key={idx}
+                className="border border-border rounded-lg p-8 hover:border-accent/50 transition-all duration-200"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-start justify-between">
+                    <h3 className="text-xl font-bold leading-tight max-w-2xl">
+                      {article.title}
+                    </h3>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {article.summary}
+                  </p>
+                  <div className="flex items-center justify-between pt-4 border-t border-border/50">
+                    <div className="flex gap-2 flex-wrap">
+                      {article.topics.map((topic) => (
+                        <span
+                          key={topic}
+                          className="px-2 py-1 text-xs font-mono bg-accent/10 text-accent border border-accent/30 rounded"
+                        >
+                          {topic}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <span className="text-xs text-muted-foreground font-mono">
+                        {article.timestamp}
+                      </span>
+                      <a
+                        href="#"
+                        className="text-xs font-mono text-accent hover:text-accent/80 transition"
+                      >
+                        Read Brief →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* System Design Principles */}
       <section id="principles" className="py-32 border-t border-border">
         <div className="container space-y-16">

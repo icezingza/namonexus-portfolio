@@ -1,9 +1,7 @@
 import type { ReactNode } from "react";
-import ResearchBriefLayout from "@/components/research/ResearchBriefLayout";
-
-function Term({ children }: { children: ReactNode }) {
-  return <span className="text-cyan-400 font-mono">{children}</span>;
-}
+import ResearchBriefLayout, {
+  Term,
+} from "@/components/research/ResearchBriefLayout";
 
 function SubPoint({ title, children }: { title: string; children: ReactNode }) {
   return (

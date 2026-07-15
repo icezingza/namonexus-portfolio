@@ -2,6 +2,10 @@ import type { ReactNode } from "react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "wouter";
 
+export function Term({ children }: { children: ReactNode }) {
+  return <span className="text-cyan-400 font-mono">{children}</span>;
+}
+
 interface ResearchBriefLayoutProps {
   title: string;
   summary: string;
@@ -21,11 +25,12 @@ export default function ResearchBriefLayout({
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container flex items-center justify-between h-16">
-          <Link href="/#research">
-            <div className="flex items-center gap-2 cursor-pointer text-muted-foreground hover:text-accent transition">
-              <ArrowLeft className="w-5 h-5" />
-              <span className="text-sm">Back to Research</span>
-            </div>
+          <Link
+            href="/#research"
+            className="flex items-center gap-2 text-muted-foreground hover:text-accent transition text-sm"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            Back to Research
           </Link>
           <img
             src="/manus-storage/namonexus-logo_66b46ffc.png"

@@ -73,3 +73,9 @@ The public URL opened successfully and returned the title `NamoNexus — Soverei
 `package.json` now pins `lucide-react` to exact version `0.453.0` rather than a caret range. `pnpm-lock.yaml` was regenerated so the importer specifier and resolved package agree.
 
 A fresh temporary copy with no `node_modules` completed `pnpm install --frozen-lockfile --ignore-scripts` successfully, resolved `lucide-react 0.453.0`, then passed `pnpm check` and `pnpm exec vite build`. The build emitted only the existing non-blocking chunk-size advisory. This closes the previous reproducibility blocker for the frontend handoff package.
+
+## Production asset audit checkpoint
+
+The active four-route prototype does not load the 2.1 MB raster reference logo; it uses a CSS compact N mark, a CSS text wordmark, and a local 64×64 SVG favicon. The favicon is technically lightweight, local, and legible at icon scale, but its own SVG title/description labels it as a prototype mark.
+
+The separate `/home/ubuntu/upload/RefinedNamoNexusVectorLogo.png` reference is a 2000×2000 PNG with a dark starfield, cyan/magenta orbital ring, circuit-style N, and NamoNexus wordmark. It is suitable as a visual reference for the slide cover, not as a production asset until the owner confirms source ownership, trademark permission, rights, and final geometry. It is not included in the clean source ZIP.

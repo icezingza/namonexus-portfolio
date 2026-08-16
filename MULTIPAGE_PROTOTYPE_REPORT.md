@@ -90,3 +90,11 @@ The final source build after the handoff validation merge passed `pnpm check` an
 ## Dependency reproducibility
 
 The frontend handoff now pins `lucide-react` to exact version `0.453.0` and regenerates `pnpm-lock.yaml`. A fresh temporary copy with no installed dependencies passed `pnpm install --frozen-lockfile --ignore-scripts`, `pnpm check`, and `pnpm exec vite build`. The build emitted the existing non-blocking chunk-size advisory only. The frontend handoff package is therefore reproducibly installable and buildable on a new environment. Full repository/server build, backend integration, production Contact delivery, and legal/brand asset approval remain outside this frontend-only release.
+
+## Production asset and approval status
+
+The active prototype uses CSS treatments for the compact N and horizontal wordmark plus a local `client/public/favicon.svg`. These pass technical preview checks but remain **UNVERIFIED for production brand, trademark, copyright, font-license, and source-file ownership approval**. The 2000×2000 raster reference logo used by the presentation is not used by the active routes and is not included in the clean source export.
+
+`CONTACT_RESEND_INTEGRATION_RUNBOOK.md` now documents two viable integration approaches, server-only secret handling, verified sending domain setup, proposed environment variables, server-side validation, rate limiting, logging redaction, staging tests, rollback, and official Resend references. The branch remains preview-only and no `RESEND_API_KEY` has been created, stored, or used.
+
+`PRODUCTION_APPROVAL_REQUEST.md` provides the explicit checklist and approval block required before merging into `main` or deploying production. The current recommendation is to keep Contact in preview-only mode until the owner selects and approves a real integration path.

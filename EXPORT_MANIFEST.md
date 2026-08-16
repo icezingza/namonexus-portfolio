@@ -8,7 +8,7 @@ The export is a frontend prototype/documentation package only. It is not a deplo
 
 ## Included
 
-The ZIP preserves the frontend source structure, including `package.json`, lockfile, Vite/Tailwind/TypeScript configuration, `client/index.html`, the prototype `client/public/favicon.svg`, `client/src/`, the minimal `shared/const.ts` compatibility module required by the existing TypeScript path alias, existing client components/pages, the synchronized Contact page, prototype navigation, reports, validation evidence, implementation guides, production-readiness record, and slide summary.
+The ZIP preserves the frontend source structure, including `package.json`, lockfile, Vite/Tailwind/TypeScript configuration, `client/index.html`, the prototype `client/public/favicon.svg`, `client/src/`, the minimal `shared/const.ts` compatibility module required by the existing TypeScript path alias, existing client components/pages, the synchronized Contact page, prototype navigation, reports, validation evidence, implementation guides, the Resend Contact integration runbook, the Production Approval request, the production-readiness record, and slide summary.
 
 ## Excluded
 

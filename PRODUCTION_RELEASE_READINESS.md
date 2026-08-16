@@ -41,3 +41,17 @@ Do not merge this branch into `main`, do not connect Contact to a provider, and 
 ## Dependency reproducibility gate
 
 The previous handoff blocker is resolved on the feature branch: `lucide-react` is pinned to exact version `0.453.0`, and `pnpm-lock.yaml` was regenerated. A fresh temporary environment with no installed dependencies passed `pnpm install --frozen-lockfile --ignore-scripts`, `pnpm check`, and `pnpm exec vite build`. The Vite build still reports the existing non-blocking chunk-size advisory; it does not fail the build.
+
+## Second asset audit
+
+The active production candidate still has no approved master logo, wordmark, or favicon asset. The current compact N and horizontal wordmark are CSS prototype treatments in `PrototypeNav.tsx`; the local `client/public/favicon.svg` is a newly created prototype vector mark. The 2000×2000 raster reference logo used by the presentation is outside the source package and is not used by the active four-route prototype.
+
+| Production asset decision | Latest status |
+|---|---|
+| Master logo geometry and wordmark | UNVERIFIED — owner/brand approval required |
+| Favicon geometry and small-size legibility | PASS for preview, UNVERIFIED for production approval |
+| Trademark and asset ownership | UNVERIFIED — cannot be inferred from a local file or reference image |
+| Font licensing and external font dependency | UNVERIFIED — Google Fonts remains in the preview entrypoint; production policy must decide whether to self-host or approve the dependency |
+| Watermarked media | PASS — none used in active routes or clean ZIP |
+
+No assistant-side technical audit can substitute for the owner's trademark, copyright, license, or brand approval. Production deploy should remain blocked until the owner or authorized approver records those decisions.

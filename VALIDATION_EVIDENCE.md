@@ -53,3 +53,23 @@ A fresh Contact keyboard traversal reached the brand link, Menu button, name, em
 `/home/ubuntu/namonexus-frontend-prototype-clean.zip` was generated from the source worktree with the original directory structure preserved. Required files including `package.json`, `pnpm-lock.yaml`, Vite/TypeScript config, `client/src/...`, `shared/const.ts`, synchronized reports, and the export manifest are present. `node_modules/`, build output, `.manus-logs/`, the preview harness collector, server directory, watermarked media, `AccessDenied`, and 111-byte artifacts are excluded.
 
 The ZIP was extracted to a temporary verification directory. With dependencies supplied from the existing local cache, `pnpm check` and `pnpm exec vite build` both completed successfully. The build emitted the same non-blocking chunk-size advisory. The final ZIP checksum is reported separately with the deliverable.
+
+## Feature branch validation checkpoint
+
+After the feature branch was created and the preview restarted, the browser audit at 390×844 returned the expected title, H1, and `/favicon.svg` on all four routes. All routes reported `clientWidth=390` and `scrollWidth=390`.
+
+Contact accepted a high-level preview inquiry with Broad timing selected, then hid the form and displayed the local success state. Reduced-motion emulation matched and all `.motion-orbit`/`.motion-particle` computed animation names were `none`. Keyboard traversal reached the brand link, Menu, name, email, organization, context, focus, situation, Broad timing, consent, and submit.
+
+The raw request filter matched Vite development source/document requests such as `/src/pages/Contact.tsx` and `/contact`; it did not match a Contact API, email provider, CRM, database, analytics, or Resend endpoint. These dev-server requests are not form submissions.
+
+## Temporary staging checkpoint
+
+A temporary public preview was exposed from the feature-branch Vite process at `https://3000-i0fjxtwepcvuud19ug2lk-84ea7bcd.sg1.manus.computer/`. This is a temporary staging/preview URL only; it is not a production deployment, custom domain, DNS change, or merge.
+
+The public URL opened successfully and returned the title `NamoNexus — Sovereign AI Systems Studio`.
+
+## Dependency reproducibility checkpoint
+
+`package.json` now pins `lucide-react` to exact version `0.453.0` rather than a caret range. `pnpm-lock.yaml` was regenerated so the importer specifier and resolved package agree.
+
+A fresh temporary copy with no `node_modules` completed `pnpm install --frozen-lockfile --ignore-scripts` successfully, resolved `lucide-react 0.453.0`, then passed `pnpm check` and `pnpm exec vite build`. The build emitted only the existing non-blocking chunk-size advisory. This closes the previous reproducibility blocker for the frontend handoff package.

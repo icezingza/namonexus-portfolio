@@ -37,3 +37,7 @@ The following items remain **UNVERIFIED** and are accepted as outside the fronte
 ## Release gate
 
 Do not merge this branch into `main`, do not connect Contact to a provider, and do not deploy a production domain until the owner records explicit approval for the exact action. A staging or temporary preview URL may be used for visual and behavior review only.
+
+## Dependency reproducibility gate
+
+The previous handoff blocker is resolved on the feature branch: `lucide-react` is pinned to exact version `0.453.0`, and `pnpm-lock.yaml` was regenerated. A fresh temporary environment with no installed dependencies passed `pnpm install --frozen-lockfile --ignore-scripts`, `pnpm check`, and `pnpm exec vite build`. The Vite build still reports the existing non-blocking chunk-size advisory; it does not fail the build.

@@ -2,7 +2,7 @@
 
 ## Source of truth
 
-This export is generated from the real NamoNexus repository worktree at `/home/ubuntu/namonexus-multipage`, remote `https://github.com/icezingza/namonexus-portfolio.git`, branch `feature/namonexus-frontend-preview`, commit `bd11be6` (full commit is available in Git).
+This export is generated from the real NamoNexus repository worktree at `/home/ubuntu/namonexus-multipage`, remote `https://github.com/icezingza/namonexus-portfolio.git`, branch `feature/namonexus-frontend-preview`. The exact commit is reported with the final handoff because the manifest is regenerated whenever package metadata changes.
 
 The export is a frontend prototype/documentation package only. It is not a deployment artifact and does not change production, DNS, Cloudflare, backend, API, database, email, analytics, storage, or hosting settings.
 

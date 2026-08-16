@@ -86,3 +86,7 @@ At 390×844, the Contact page rendered as a single column with all fields within
 Submitting the empty form produced seven explicit validation messages for name, work email, organization, organization context, conversation focus, high-level situation, and preview consent. Broad timing remained optional. Filling the approved high-level fields, selecting Broad timing, and checking consent produced the local success state: “No data was sent, stored, emailed, or recorded.” This is a frontend-only simulation.
 
 The final source build after the handoff validation merge passed `pnpm check` and `pnpm exec vite build`. The only build warning was the existing chunk-size advisory. No protected backend/package/build configuration files were modified.
+
+## Dependency reproducibility
+
+The frontend handoff now pins `lucide-react` to exact version `0.453.0` and regenerates `pnpm-lock.yaml`. A fresh temporary copy with no installed dependencies passed `pnpm install --frozen-lockfile --ignore-scripts`, `pnpm check`, and `pnpm exec vite build`. The build emitted the existing non-blocking chunk-size advisory only. The frontend handoff package is therefore reproducibly installable and buildable on a new environment. Full repository/server build, backend integration, production Contact delivery, and legal/brand asset approval remain outside this frontend-only release.

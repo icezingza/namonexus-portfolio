@@ -7,11 +7,17 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import NamoCare from "./pages/NamoCare";
 import FrontierOfSovereignAI from "./pages/research/FrontierOfSovereignAI";
+import CapabilityProcess from "./pages/CapabilityProcess";
+import Principles from "./pages/Principles";
+import Contact from "./pages/Contact";
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/capability"} component={CapabilityProcess} />
+      <Route path={"/principles"} component={Principles} />
+      <Route path={"/contact"} component={Contact} />
       <Route path={"/projects/namo-care"} component={NamoCare} />
       <Route
         path={"/research/frontier-of-sovereign-ai"}
